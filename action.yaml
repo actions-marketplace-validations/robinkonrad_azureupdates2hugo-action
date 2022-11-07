@@ -1,0 +1,19 @@
+name: AzureUpdates to Hugo Importer
+description: Grabs the current azure updates rss feed from https://azurecomcdn.azureedge.net/en-us/blog/topics/updates/feed/ and converts it to json to process the data within hugo
+branding:
+  icon: news
+  color: orange
+inputs:
+  filename:
+    description: Filename of the convert jsonfile within the data folder
+    required: false
+    type: string
+    default: azureupdatesfeed.json
+  rawfilename:
+    description: Filename of the downloaded xmlfile within the data folder
+    required: false
+    type: string
+    default: azureupdatesfeed.xml
+runs:
+  using: docker
+  image: Dockerfile
