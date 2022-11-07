@@ -18,6 +18,6 @@ echo "::debug::Location of the raw xml2json file: $INPUT_ROWFILENAME"
 URL="https://azurecomcdn.azureedge.net/en-us/blog/topics/updates/feed/"
 echo "::debug::Feed url: $URL"
 
-curl --silent "$URL" > "$INPUT_DATAFILERAW"
+curl --silent "$URL" > "$INPUT_ROWFILENAME"
 
-cat "$INPUT_DATAFILERAW" | xq . > "$INPUT_FILENAME"
+cat "$INPUT_ROWFILENAME" | xq . > "$INPUT_FILENAME"
