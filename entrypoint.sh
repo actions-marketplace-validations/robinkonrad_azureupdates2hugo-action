@@ -17,3 +17,5 @@ FEEDURL="https://azurecomcdn.azureedge.net/en-us/blog/topics/updates/feed/"
 echo "::debug::Feed url: $FEEDURL"
 
 curl --silent "$URL" > "$INPUT_DATAFILERAW"
+
+cat "$INPUT_DATAFILERAW" | xq . > "$INPUT_FILENAME"
