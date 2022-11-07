@@ -15,7 +15,7 @@ mkdir -p "$(dirname "$INPUT_ROWFILENAME")"
 rm -f "$INPUT_ROWFILENAME"
 echo "::debug::Location of the raw xml2json file: $INPUT_ROWFILENAME"
 
-FEEDURL="https://azurecomcdn.azureedge.net/en-us/blog/topics/updates/feed/"
+URL="https://azurecomcdn.azureedge.net/en-us/blog/topics/updates/feed/"
 echo "::debug::Feed url: $FEEDURL"
 
 curl --silent "$URL" > "$INPUT_DATAFILERAW"
